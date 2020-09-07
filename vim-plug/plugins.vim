@@ -16,8 +16,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     " Themes
-    Plug 'joshdick/onedark.vim'
-    Plug 'arcticicestudio/nord-vim'
+    Plug 'morhetz/gruvbox'
+    " Plug 'joshdick/onedark.vim'
+    " Plug 'arcticicestudio/nord-vim'
     " plugins I like
     Plug 'mhinz/vim-startify'
     " Status Line
@@ -41,6 +42,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tomtom/tcomment_vim'
     " Snippets
     Plug 'honza/vim-snippets'
+    " vim port of emacs-which-key that displays available keybindings in popup
+    Plug 'liuchengxu/vim-which-key'
     " Gruvbox theme.
     " Plug 'gruvbox-community/gruvbox'
     " Fancy start screen with vim
