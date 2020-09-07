@@ -30,22 +30,16 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 
 " Single mappings
-let g:which_key_map['/'] = [ ':call Comment()'                    , 'comment' ]
-let g:which_key_map['.'] = [ ':e $MYVIMRC'                        , 'open init' ]
-let g:which_key_map[';'] = [ ':Commands'                          , 'commands' ]
-let g:which_key_map['='] = [ '<C-W>='                             , 'balance windows' ]
-let g:which_key_map['d'] = [ ':Bdelete'                           , 'delete buffer']
-let g:which_key_map['e'] = [ ':CocCommand explorer'               , 'explorer' ]
-" let g:which_key_map['f'] = [ ':Farr'                              , 'find and replace' ]
-let g:which_key_map['h'] = [ '<C-W>s'                             , 'split below']
-let g:which_key_map['m'] = [ ':call WindowSwap#EasyWindowSwap()'  , 'move window' ]
-let g:which_key_map['p'] = [ ':Files'                             , 'search files' ]
-let g:which_key_map['q'] = [ 'q'                                  , 'quit' ]
-let g:which_key_map['r'] = [ ':RnvimrToggle'                      , 'ranger' ]
-let g:which_key_map['u'] = [ ':UndotreeToggle'                    , 'undo tree']
-let g:which_key_map['v'] = [ '<C-W>v'                             , 'split right']
-let g:which_key_map['W'] = [ 'w'                                  , 'write' ]
-let g:which_key_map['z'] = [ 'Goyo'                               , 'zen' ]
+" Single mappings
+let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
+let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
+let g:which_key_map['f'] = [ ':Files'                     , 'search files' ]
+let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
+let g:which_key_map['r'] = [ ':Ranger'                    , 'ranger' ]
+let g:which_key_map['S'] = [ ':Startify'                  , 'start screen' ]
+let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
+let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
+let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
 
 " Group mappings
 
@@ -107,7 +101,7 @@ let g:which_key_map.k = {
       " \ 'l' : [':AsyncTaskList'               , 'list tasks'],
 
 " s is for search
-let g:which_key_map.s = {
+let g:which_key_map.se = {
       \ 'name' : '+search' ,
       \ '/' : [':History/'              , 'history'],
       \ ';' : [':Commands'              , 'commands'],
@@ -146,7 +140,7 @@ let g:which_key_map.S = {
       \ }
 
 " g is for git
-let g:which_key_map.g = {
+let g:which_key_map.gi = {
       \ 'name' : '+git' ,
       \ 'a' : [':Git add .'                        , 'add all'],
       \ 'A' : [':Git add %'                        , 'add current'],

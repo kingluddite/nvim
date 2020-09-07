@@ -44,6 +44,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'honza/vim-snippets'
     " vim port of emacs-which-key that displays available keybindings in popup
     Plug 'liuchengxu/vim-which-key'
+    Plug 'mhinz/vim-signify'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-rhubarb'
+    Plug 'junegunn/gv.vim'
     " Gruvbox theme.
     " Plug 'gruvbox-community/gruvbox'
     " Fancy start screen with vim
