@@ -39,6 +39,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'justinmk/vim-sneak'
     " Easy comments
     Plug 'tomtom/tcomment_vim'
+    " Snippets
+    Plug 'honza/vim-snippets'
     " Gruvbox theme.
     " Plug 'gruvbox-community/gruvbox'
     " Fancy start screen with vim
