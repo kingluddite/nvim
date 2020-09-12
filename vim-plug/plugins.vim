@@ -48,6 +48,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
     Plug 'junegunn/gv.vim'
+    Plug 'unblevable/quick-scope' 
+    " floating terminal for neovim
+    Plug 'voldikss/vim-floaterm'
+    " Writing Screenplays
+    Plug 'kblin/vim-fountain'
     " Gruvbox theme.
     " Plug 'gruvbox-community/gruvbox'
     " Fancy start screen with vim
