@@ -106,6 +106,7 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 " set runtimepath^=~/.vim/bundle.ctrlp.vim " fuzzy search
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
-
+" Formatting
+autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
 " You can't stop me
 cmap w!! w !sudo tee % 

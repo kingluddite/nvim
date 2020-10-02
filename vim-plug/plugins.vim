@@ -53,6 +53,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'voldikss/vim-floaterm'
     " Writing Screenplays
     Plug 'kblin/vim-fountain'
+    " Autoformat for ESLint and prettier
+    Plug 'w0rp/ale'
     " Gruvbox theme.
     " Plug 'gruvbox-community/gruvbox'
     " Fancy start screen with vim
@@ -73,7 +75,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'tomtom/tcomment_vim'
     " Plug 'chun-yang/auto-pairs'
     " Plug 'ctrlpvim/ctrlp.vim'
-    " Plug 'w0rp/ale'
     " Plug 'gioele/vim-autoswap'
     " React code snippets
     " Plug 'mxw/vim-jsx'
