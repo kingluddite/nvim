@@ -1,8 +1,14 @@
 {
+  "suggest.noselect": false,
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
+    "scss",
+    "typescript",
+    "typescriptreact",
     "markdown",
     "javascript",
+    "javascriptreact",
+    "javascript.tsx",
     "graphql",
     "html",
     "yaml",
@@ -20,11 +26,16 @@
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
   "explorer.keyMappings": {
-    "<cr>": [
-      "expandable?",
-      "expand",
-      "open"
-    ],
+    "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
-  }
+  },
+  // emmet
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  // eslint
+  "eslint.enable": true,
+  "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
+  "eslint.autoFix": false,
+  "eslint.autoFixOnSave": false
 }

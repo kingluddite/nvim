@@ -53,8 +53,11 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 " set backupdir=/tmp         " tell vim where to put its backup files
 " set clipboard=unnamed " set clipboard to easily copy from vim and paste into OSx
 " set dir=/tmp               " tell vim where to put swap files
-" set foldcolumn=1           " Add a bit extra margin to the left
-" set foldmethod=indent      " Code fold bliss
+" -- FOLDING -- (https://medium.com/vim-drops/javascript-folding-on-vim-119c70d2e872)
+ set foldmethod=syntax "syntax highlighting items specify folds"
+ set foldcolumn=1 "defines 1 col at window left, to indicate folding"
+ let javaScript_fold=1 "activate folding by JS syntax"
+ set foldlevelstart=99 "start file will all folds opened"
 " set formatoptions=tcqrn1
 " set expandtab              " use spaces instead of tabs
 " set history=1000           " Keep 1000 items in the history

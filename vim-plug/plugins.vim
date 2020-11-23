@@ -11,12 +11,19 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
-    " File Explorer
-    " Plug 'scrooloose/NERDTree'
+    "navigate seamlessly between vim and tmux splits using a consistent set of hotkeys
+    Plug 'christoomey/vim-tmux-navigator'    " File Explorer
+    " Navigate and manipulate files in a tree view.
+    Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
+    Plug 'mattn/emmet-vim'
+    " Cool Icons
+    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'ryanoasis/vim-devicons'
     " Themes
     Plug 'morhetz/gruvbox'
+    Plug 'herringtondarkholme/yats.vim'
     " Plug 'joshdick/onedark.vim'
     " Plug 'arcticicestudio/nord-vim'
     " plugins I like
@@ -26,7 +33,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-airline/vim-airline-themes'
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+    " es7-react-js-snippets for coc
+    Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
+    " Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
@@ -54,13 +63,19 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Writing Screenplays
     Plug 'kblin/vim-fountain'
     " Autoformat for ESLint and prettier
-    Plug 'w0rp/ale'
-    " Gruvbox theme.
-    " Plug 'gruvbox-community/gruvbox'
-    " Fancy start screen with vim
-    " Integrate fzf with Vim.
+    " Plug 'w0rp/ale'
+    Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+    "Dim paragraphs above and below the active paragraph.
+    Plug 'junegunn/limelight.vim'
+    " Distraction free writing by removing UI elements and centering everything.
+    Plug 'junegunn/goyo.vim'
+    Plug 'tpope/vim-surround'
+    " Closetags
+    Plug 'alvan/vim-closetag'    " Fancy start screen with vim
+    " Auto change html tags
+    Plug 'AndrewRadev/tagalong.vim'    " Integrate fzf with Vim.
     " Plug '/usr/local/opt/fzf' " installed via homebrew
-    " Plug 'junegunn/fzf.vim'
     " Automatically clear search highlights after you move your cursor.
     " Plug 'haya14busa/is.vim'
     " Plug 'mitermayer/vim-prettier'
@@ -69,11 +84,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Handle multi-file find and replace.
     " Plug 'mhinz/vim-grepper'
     " Surround text with quotes, parenthesis, brackets, and more.
-    " Plug 'tpope/vim-surround'
     " Plug 'easymotion/vim-easymotion'
-    " Plug 'mattn/emmet-vim'
     " Plug 'tomtom/tcomment_vim'
-    " Plug 'chun-yang/auto-pairs'
     " Plug 'ctrlpvim/ctrlp.vim'
     " Plug 'gioele/vim-autoswap'
     " React code snippets
@@ -109,8 +121,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " Plug 'chrisbra/csv.vim'
 " Plug 'ekalinin/dockerfile.vim'
 " Plug 'elzr/vim-json'
-" Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
-" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 " Plug 'lifepillar/pgsql.vim'
 " Plug 'othree/html5.vim'
 " Plug 'pangloss/vim-javascript'
