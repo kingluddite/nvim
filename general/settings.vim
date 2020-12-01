@@ -5,11 +5,9 @@
 
 " set leader key
 let g:mapleader = "\<Space>"
-
-
-
 set iskeyword+=-                      	" treat dash separated words as a word text object"
-set formatoptions-=cro                  " Stop newline continution of comments
+
+set formatoptions-=cro " Stop newline continution of comments
 
 syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
@@ -108,6 +106,8 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 " set wrap                   
 " set runtimepath^=~/.vim/bundle.ctrlp.vim " fuzzy search
 
+" The following command a comment character will not be automatically inserted in the next line under any situation
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 " Formatting
 autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript

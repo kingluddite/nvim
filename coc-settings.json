@@ -25,17 +25,14 @@
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
-  "explorer.keyMappings": {
+  "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   },
+  // python config
+
   // emmet
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
-  },
-  // eslint
-  "eslint.enable": true,
-  "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
-  "eslint.autoFix": false,
-  "eslint.autoFixOnSave": false
+  }
 }
