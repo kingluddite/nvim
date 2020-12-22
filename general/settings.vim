@@ -59,6 +59,8 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
  set foldcolumn=1 "defines 1 col at window left, to indicate folding"
  let javaScript_fold=1 "activate folding by JS syntax"
  set foldlevelstart=99 "start file will all folds opened"
+ " use ripgrep instead of grep
+ set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 " set formatoptions=tcqrn1
 " set expandtab              " use spaces instead of tabs
 " set history=1000           " Keep 1000 items in the history
