@@ -39,9 +39,12 @@ set noshowmode                          " We don't need to see things like -- IN
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
+" https://www.johnhawthorn.com/2012/09/vi-escape-delays/
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
+set ttimeoutlen=0          " https://stackoverflow.com/questions/37644682/why-is-vim-so-slow/37645334
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
+" vim was supper slow and then added below line
 
 "set autochdir                           " Your working directory will always be the same as your working directory
 " set autoindent             " auto-indent
