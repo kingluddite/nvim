@@ -45,7 +45,10 @@ set ttimeoutlen=0          " https://stackoverflow.com/questions/37644682/why-is
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 " vim was supper slow and then added below line
-
+" vim persistent undo
+" https://jovicailic.org/2017/04/vim-persistent-undo/
+set undofile " Maintain undo history between sessions
+set undodir=~/.config/nvim/undodir
 "set autochdir                           " Your working directory will always be the same as your working directory
 " set autoindent             " auto-indent
 " set bg=dark
