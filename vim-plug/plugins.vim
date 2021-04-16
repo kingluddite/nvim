@@ -17,6 +17,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
+    " Multi Cursors
+    Plug 'mg979/vim-visual-multi', {'branch': 'master'}
     Plug 'mattn/emmet-vim'
     " Cool Icons
     Plug 'kyazdani42/nvim-web-devicons'
@@ -63,7 +65,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Writing Screenplays
     Plug 'kblin/vim-fountain'
     " Autoformat for ESLint and prettier
-    " Plug 'w0rp/ale'
+    Plug 'w0rp/ale'
     Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
     "Dim paragraphs above and below the active paragraph.

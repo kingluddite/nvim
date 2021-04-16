@@ -10,6 +10,7 @@ set iskeyword+=-                      	" treat dash separated words as a word te
 set formatoptions-=cro " Stop newline continution of comments
 
 syntax enable                           " Enables syntax highlighing
+set showcmd
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
@@ -86,7 +87,6 @@ set undodir=~/.config/nvim/undodir
 " set showmatch
 " set si                     " Smart indent
 " set shiftwidth=2   " indent/outdent by 2 columns
-" set showcmd
 " set showmode
 " set softtabstop=2  " unify
 " set smartcase
@@ -113,6 +113,9 @@ set undodir=~/.config/nvim/undodir
 " set wildignore+=*~,*.swp,*.swo,*.tmp
 " set wrap                   
 " set runtimepath^=~/.vim/bundle.ctrlp.vim " fuzzy search
+
+" instead of man pages open google search 
+set keywordprg=google
 
 " The following command a comment character will not be automatically inserted in the next line under any situation
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

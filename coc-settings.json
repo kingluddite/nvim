@@ -3,8 +3,6 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "scss",
-    "typescript",
-    "typescriptreact",
     "markdown",
     "javascript",
     "javascriptreact",
@@ -15,6 +13,13 @@
     "json",
     "python"
   ],
+  "html.filetypes": [
+        "html",
+        "php.html",
+        "handlebars",
+        "razor"
+  ],
+  "html.format.enable": true,
   // snippets
   //  "snippets.ultisnips.directories": [
   //   "UltiSnips",
@@ -29,6 +34,15 @@
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   },
+  "javascript.suggestionActions.enabled": false,
+  "typescript.suggestionActions.enabled": false,
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
+  // override prettier defaults
+  "prettier.printWidth": 100,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
   // python config
 
   // emmet
