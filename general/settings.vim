@@ -59,7 +59,10 @@ set undodir=~/.config/nvim/undodir
 " set clipboard=unnamed " set clipboard to easily copy from vim and paste into OSx
 " set dir=/tmp               " tell vim where to put swap files
 " -- FOLDING -- (https://medium.com/vim-drops/javascript-folding-on-vim-119c70d2e872)
- set foldmethod=syntax "syntax highlighting items specify folds"
+ set foldmethod=indent "syntax highlighting items specify folds"
+ set foldnestmax=10
+ set nofoldenable
+ set foldlevel=2
  set foldcolumn=1 "defines 1 col at window left, to indicate folding"
  let javaScript_fold=1 "activate folding by JS syntax"
  set foldlevelstart=99 "start file will all folds opened"
