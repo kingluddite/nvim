@@ -11,7 +11,6 @@ nnoremap <M-l>    :vertical resize +2<CR>
 " I hate escape more than anything else
 inoremap jk <Esc>
 inoremap kj <Esc>
-
 " Easy CAPS
 inoremap <c-u> <ESC>viwUi
 nnoremap <c-u> viwU<Esc>
@@ -52,9 +51,6 @@ xnoremap p pgvy
 " FZF
 nnoremap <silent> <leader>f :FZF<cr>
 nnoremap <silent> <leader>F :FZF ~<cr>
-
-" clear buffers (NOT WORKING)
-" noremap <Leader>bb :%bd\|e#\|bd#<cr>\|'"
 
 "This unsets the "last search pattern" register by hitting return
 nnoremap <silent> <CR> :nohlsearch<CR><CR>

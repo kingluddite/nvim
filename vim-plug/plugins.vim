@@ -77,6 +77,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'alvan/vim-closetag'    " Fancy start screen with vim
     " Auto change html tags
     Plug 'AndrewRadev/tagalong.vim'    " Integrate fzf with Vim.
+    Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
     " Plug '/usr/local/opt/fzf' " installed via homebrew
     " Automatically clear search highlights after you move your cursor.
     " Plug 'haya14busa/is.vim'

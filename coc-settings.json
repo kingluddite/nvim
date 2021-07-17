@@ -25,6 +25,7 @@
   //   "UltiSnips",
   //  "~/.config/nvim/utils/snips"
   // ],
+  "snippets.ultisnips.usePythonx": false,
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
   // explorer
   "explorer.width": 30,
