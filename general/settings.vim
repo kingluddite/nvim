@@ -4,7 +4,7 @@
 " -----------------------------------------------------------------------------
 
 " set leader key
-let g:mapleader = "\<Space>"
+let g:mapleader = ","
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 
 set formatoptions-=cro " Stop newline continution of comments
@@ -12,7 +12,19 @@ set formatoptions-=cro " Stop newline continution of comments
 syntax enable                           " Enables syntax highlighing
 set showcmd
 set hidden                              " Required to keep multiple buffers open multiple buffers
-set nowrap                              " Display long lines as just one line
+
+" Word Wrap Stuff
+" set nowrap                             " Display long lines as just one line
+set wrap
+" only want line breaks inserted when you explicitly press the Enter key
+set linebreak
+" prevent vim from automatically inserting line breaks in newly entered text
+set textwidth=0
+set wrapmargin=0
+" keep existing 'textwidth' settings for most lines in your file 
+" but not have vim automatically reformat when typing on existing lines 
+set formatoptions-=t
+
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file

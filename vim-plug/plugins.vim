@@ -66,7 +66,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kblin/vim-fountain'
     " Autoformat for ESLint and prettier
     Plug 'w0rp/ale'
-    Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
     "Dim paragraphs above and below the active paragraph.
     Plug 'junegunn/limelight.vim'
@@ -78,6 +77,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Auto change html tags
     Plug 'AndrewRadev/tagalong.vim'    " Integrate fzf with Vim.
     Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+    " Makes writing notes easy
+    Plug 'vimwiki/vimwiki'
+    Plug 'tbabej/taskwiki'
+    Plug 'plasticboy/vim-markdown'
     " Plug '/usr/local/opt/fzf' " installed via homebrew
     " Automatically clear search highlights after you move your cursor.
     " Plug 'haya14busa/is.vim'
@@ -106,7 +109,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " Plug 'tacahiroy/ctrlp-funky'
 " Plug 'dsimidzija/vim-nerdtree-ignore'
 " Plug 'ryanoasis/vim-devicons'
-" Plug 'vimwiki/vimwiki'
 " Navigate and manipulate files in a tree view.
 "Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " Plug 'ap/vim-css-color'
