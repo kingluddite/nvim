@@ -79,8 +79,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
     " Makes writing notes easy
     Plug 'vimwiki/vimwiki'
-    Plug 'tbabej/taskwiki'
+    " Plug 'tbabej/taskwiki'
     Plug 'plasticboy/vim-markdown'
+    Plug 'tpope/vim-projectionist'
     " Plug '/usr/local/opt/fzf' " installed via homebrew
     " Automatically clear search highlights after you move your cursor.
     " Plug 'haya14busa/is.vim'

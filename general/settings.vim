@@ -7,6 +7,11 @@
 let g:mapleader = ","
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 
+" python not working errror
+" let g:python_host_prog="/opt/homebrew/Cellar/pyenv/2.0.4/libexec/pyenv"
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 set formatoptions-=cro " Stop newline continution of comments
 
 syntax enable                           " Enables syntax highlighing
