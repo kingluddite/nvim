@@ -1,5 +1,7 @@
 " Enable true colors if available
 set termguicolors
+" Needed to give spellcheck bad words a background
+let g:gruvbox_guisp_fallback = "bg"
 colorscheme gruvbox
 
 " Fix transparent background in Vim / Neovim

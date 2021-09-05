@@ -7,7 +7,7 @@ nnoremap <M-j>    :resize -2<CR>
 nnoremap <M-k>    :resize +2<CR>
 nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
-"
+
 " I hate escape more than anything else
 inoremap jk <Esc>
 inoremap kj <Esc>
@@ -16,8 +16,25 @@ inoremap kj <Esc>
 " inoremap <c-u> <ESC>viwUi
 " nnoremap <c-u> viwU<Esc>
 
+" Easy load of nvim 
+nnoremap <silent> <Leader><Leader> :source $MYVIMRC<CR>
+
+" Undotree
+nnoremap <c-t> :UndotreeToggle<CR>
+
+let g:undotree_RelativeTimestamp = 1 
+let g:undotree_ShortIndicators = 1
+let g:undotree_HelpLine = 0
+let g:undotree_WindowLayout = 2
+
+if has("persistent_undo")
+  set undodir=~/.config/nvim/undodir
+  set undofile " Maintain undo history between sessions
+endif
+
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
+
 " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
 

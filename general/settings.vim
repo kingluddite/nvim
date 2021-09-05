@@ -7,14 +7,17 @@
 let g:mapleader = ","
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 
-" python not working errror
-" let g:python_host_prog="/opt/homebrew/Cellar/pyenv/2.0.4/libexec/pyenv"
+" english for spellcheck 
+set spell
+set spelllang=en
+
+" Set style for gvim
 let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
-set formatoptions-=cro " Stop newline continution of comments
+set formatoptions-=cro " Stop newline continuation of comments
 
-syntax enable                           " Enables syntax highlighing
+syntax enable                           " Enables syntax highlighting
 set showcmd
 set hidden                              " Required to keep multiple buffers open multiple buffers
 
@@ -30,13 +33,15 @@ set wrapmargin=0
 " but not have vim automatically reformat when typing on existing lines 
 set formatoptions-=t
 
+set nrformats=
+
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
 set ruler              			            " Show the cursor position all the time
 set cmdheight=2                         " More space for displaying messages
 set iskeyword+=-                      	" treat dash separated words as a word text object"
-set mouse=a                            " Enable your mouse
+set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
 set t_Co=256                            " Support 256 colors
@@ -62,29 +67,44 @@ set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set ttimeoutlen=0          " https://stackoverflow.com/questions/37644682/why-is-vim-so-slow/37645334
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
+
 " vim was supper slow and then added below line
 " vim persistent undo
 " https://jovicailic.org/2017/04/vim-persistent-undo/
-set undofile " Maintain undo history between sessions
-set undodir=~/.config/nvim/undodir
-"set autochdir                           " Your working directory will always be the same as your working directory
-" set autoindent             " auto-indent
-" set bg=dark
-" set backspace=indent,eol,start
-" set backup                 " create backups
-" set backupdir=/tmp         " tell vim where to put its backup files
-" set clipboard=unnamed " set clipboard to easily copy from vim and paste into OSx
-" set dir=/tmp               " tell vim where to put swap files
+if has("persistent_undo")
+  set undodir=~/.config/nvim/undodir
+  set undofile " Maintain undo history between sessions
+endif
+
 " -- FOLDING -- (https://medium.com/vim-drops/javascript-folding-on-vim-119c70d2e872)
- set foldmethod=indent "syntax highlighting items specify folds"
- set foldnestmax=10
- set nofoldenable
- set foldlevel=2
- set foldcolumn=1 "defines 1 col at window left, to indicate folding"
- let javaScript_fold=1 "activate folding by JS syntax"
- set foldlevelstart=99 "start file will all folds opened"
- " use ripgrep instead of grep
- set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+set foldmethod=indent "syntax highlighting items specify folds"
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+set foldcolumn=1 "defines 1 col at window left, to indicate folding"
+let javaScript_fold=1 "activate folding by JS syntax"
+set foldlevelstart=99 "start file will all folds opened"
+
+" use ripgrep instead of grep
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+
+" Set the starting point of where you scroll top,middle,bottom (t/z/b)
+set scrolloff=5
+
+" instead of man pages open google search 
+set keywordprg=google
+
+" The following command a comment character will not be automatically inserted in the next line under any situation
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+
+" Formatting
+autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+
+" You can't stop me
+cmap w!! w !sudo tee % 
+
+" BONEYARD! - Gone but not forgotten
 " set formatoptions=tcqrn1
 " set expandtab              " use spaces instead of tabs
 " set history=1000           " Keep 1000 items in the history
@@ -111,7 +131,6 @@ set undodir=~/.config/nvim/undodir
 " set softtabstop=2  " unify
 " set smartcase
 " set smarttab               " use tabs at the start of a line, spaces elsewhere
-" set scrolloff=5
 " set shiftwidth=2           " 1 tab == 2 spaces
 " set t_Co=256               " enable 256-color mode
 " set t_vb=
@@ -133,14 +152,19 @@ set undodir=~/.config/nvim/undodir
 " set wildignore+=*~,*.swp,*.swo,*.tmp
 " set wrap                   
 " set runtimepath^=~/.vim/bundle.ctrlp.vim " fuzzy search
-
-" instead of man pages open google search 
-set keywordprg=google
-
-" The following command a comment character will not be automatically inserted in the next line under any situation
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
-" Formatting
-autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
-" You can't stop me
-cmap w!! w !sudo tee % 
+" make react, redux, babel paths work with gf
+" (src - https://damien.pobel.fr/post/configure-neovim-vim-gf-javascript-import/)
+" TODO this did not work but may need a revisit
+" set path=.,src
+" set suffixesadd=.js,.jsx,.ts,.tsx
+" cause vim to treat all numerals as decimal, regardless of whether they are
+"  padding with zeros like 01 or 007 (001 + 007 = 010 - Why? because
+"  vim's default is to treat any numbers beginning with zero(0) as octal notation)
+"set autochdir                           " Your working directory will always be the same as your working directory
+" set autoindent             " auto-indent
+" set bg=dark
+" set backspace=indent,eol,start
+" set backup                 " create backups
+" set backupdir=/tmp         " tell vim where to put its backup files
+" set clipboard=unnamed " set clipboard to easily copy from vim and paste into OSx
+" set dir=/tmp               " tell vim where to put swap files

@@ -82,6 +82,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'tbabej/taskwiki'
     Plug 'plasticboy/vim-markdown'
     Plug 'tpope/vim-projectionist'
+    " Visual representation of the undotree
+    Plug 'mbbill/undotree'
+    " text objects for entire buffer
+    Plug 'kana/vim-textobj-entire'
+    " need vim-textobj-user to avoid error on vim-textobj-entire
+    Plug 'kana/vim-textobj-user'
+    " dot (.) does not work in visual mode - visualrepeat fixes this
+    Plug 'vim-scripts/visualrepeat'
     " Plug '/usr/local/opt/fzf' " installed via homebrew
     " Automatically clear search highlights after you move your cursor.
     " Plug 'haya14busa/is.vim'
