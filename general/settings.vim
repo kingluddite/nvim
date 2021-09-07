@@ -8,8 +8,15 @@ let g:mapleader = ","
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 
 " english for spellcheck 
-set spell
+" set spell "(I like to disable this by default then enable when I choose)
+" enable spelling on any document with the ex command `:setlocal spell`
 set spelllang=en
+" let us press <ctrl-n> or <ctrl-p> in insert-mode to complete the word when
+"  are typing
+set complete+=kspell
+" optional to set destination of spellfile
+" set to Dropbox to sync this file with other machines
+set spellfile=$HOME/Dropbox/vim/spell/en.utf-8.add
 
 " Set style for gvim
 let g:python_host_prog = '/usr/bin/python2'

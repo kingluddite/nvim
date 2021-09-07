@@ -5,5 +5,7 @@
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 "NERDTree
-map <C-o> :NERDTreeToggle<CR>
+map <C-[> :NERDTreeToggle<CR>
 nmap <leader>ne :NERDTree<CR>
+
+
